@@ -42,6 +42,20 @@ export class ListsClass {
       });
 
       return;
+    } else if (INPUT.parentElement.id === "main-form" && !localStorage.getItem("lastListSelected")) {
+      new AlertsClass("Before adding tasks, you should create a list in the aside menu").warningAlert();
+      DOC.getElementById("confirm-ok").addEventListener("click", () => {
+        if (window.innerWidth > 700) {
+          DOC.getElementById("aside-input").focus();
+          DOC.getElementById("alert-wrapper").remove()
+        } else {
+          DOC.getElementById("menu").click();
+          DOC.getElementById("aside-input").focus();
+          DOC.getElementById("alert-wrapper").remove()
+        }
+      });
+
+      return;
     } else {
       LIST_LI.innerHTML = `
       <span>${INPUT.value}</span>
