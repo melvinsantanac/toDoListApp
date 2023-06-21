@@ -277,8 +277,8 @@ export class AsideListClass extends ListsClass {
       localStorage.setItem("lastListSelectedName", eTarget.innerText);
       DOC.getElementById("list-name").innerHTML = localStorage.getItem("lastListSelectedName");
 
-      DOC.querySelector("aside").classList.remove("menu-isActive"); // Se debe cambiar por un toggle class
-      DOC.getElementById("menu").classList.remove("menu-isOpened"); // Se debe cambiar por un toggle class
+      DOC.querySelector("aside").classList.remove("menu-isActive");
+      DOC.getElementById("menu").classList.remove("menu-isOpened");
 
       localStorage.getItem(eTarget.id) ? MAIN_LIST.innerHTML = localStorage.getItem(eTarget.id) : MAIN_LIST.innerHTML = `<span id="main-empty" class="empty">The list is empty, insert tasks using the input in the bottom of the page</span>`;
 
