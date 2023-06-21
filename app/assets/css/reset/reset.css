@@ -1,0 +1,178 @@
+@charset "UTF-8";
+
+/* Defining Custom properties */
+:root {
+  /* Color */
+  --primary-color: #02161f;
+  --secondary-color: #021b28;
+  --thirty-color: #03283c;
+  --black-color: #393939;
+  --white-color: #ffffff;
+  --contrast-color: #f58a18;
+
+  /* typography */
+  --primary-typography: 'Roboto', sans-serif;
+  --secondary-typography: Verdana;
+}
+
+/* Resetting margins and paddings of all tags */
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+/* Configuring smooth scroll for the html */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Configuring the web's typography and min-height */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  font-family: var(--primary-typography);
+  color: var(--white-color);
+  line-height: 1.4em;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Resetting styles to text elements tags */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+i,
+b,
+u,
+em {
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Resetting link tags to work as block element */
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+a:hover {
+  /* color: var(--primary-color); */
+  opacity: 1;
+}
+
+/* Regular behavior of links inside of a element <p> */
+p a {
+  display: inline;
+}
+
+/* Resetting style of the list items */
+li {
+  list-style-type: none;
+}
+
+abbr[title] {
+  text-decoration: var(--primary-color);
+}
+
+/* Avoiding some audiovisual elements issues */
+img,
+picture,
+video,
+iframe,
+figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center center;
+  object-position: center center;
+}
+
+/* Avoiding issues with pseudo elements of quotes */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+/* Setting regular properties's values for pseudoElements ::before and ::after */
+::before,
+::after {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Configuring the text selection appearance   */
+::-moz-selection {
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+
+::selection {
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+
+/* Leveling typography and form placement issues */
+form,
+input,
+textarea,
+select,
+button,
+label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Resetting tables */
+table,
+tr,
+td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Avoiding issues with SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
